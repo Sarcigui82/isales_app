@@ -9,7 +9,7 @@ class EntityType(models.Model):
 
 class Entity(models.Model):
     name = models.CharField(max_length=100)
-    entity_type = models.ForeignKey(EntityType, on_delete=models.CASCADE, related_name='entities')
+    entity_type = models.ForeignKey(EntityType, on_delete=models.CASCADE, related_name='entidades')
     contact_info = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
